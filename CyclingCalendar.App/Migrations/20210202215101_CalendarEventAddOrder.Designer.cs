@@ -4,14 +4,16 @@ using CyclingCalendar.App;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CyclingCalendar.WebApp.Migrations
 {
     [DbContext(typeof(CyclingCalendarDbContext))]
-    partial class CyclingCalendarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210202215101_CalendarEventAddOrder")]
+    partial class CalendarEventAddOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

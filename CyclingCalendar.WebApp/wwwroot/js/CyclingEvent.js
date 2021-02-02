@@ -22,13 +22,17 @@ function getEvents() {
 }
 
 function openEditModal(id) {
-    debugger;
     var data = events.filter(function (e) { return e.id === id })[0];
 
-    $('#newEventName').val(data.description);
-    $('#eventId').val(data.id);
-    $('#newEventDate').val(new Date(data.date).toLocaleDateString());
-
+    if (data) {
+        $('#newEventName').val(data.description);
+        $('#eventId').val(data.id);
+        $('#newEventDate').val(new Date(data.date).toLocaleDateString());
+    } else {
+        $('#newEventName').val('');
+        $('#eventId').val('');
+        $('#newEventDate').val(new Date().toLocaleDateString())
+    }
 
     $('#eventModal').modal('toggle');
     $('#eventModal').modal('show');

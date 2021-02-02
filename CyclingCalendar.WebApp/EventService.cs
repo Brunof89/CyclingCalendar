@@ -18,6 +18,7 @@ namespace CyclingCalendar.WebApp
     public class EventService : IEventService
     {
         private readonly CyclingCalendarDbContext _dbContext;
+
         public EventService(CyclingCalendarDbContext dbContext)
         {
             this._dbContext = dbContext;

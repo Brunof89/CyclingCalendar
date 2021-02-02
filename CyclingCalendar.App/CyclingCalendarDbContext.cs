@@ -14,6 +14,6 @@ namespace CyclingCalendar.App
         }
 
         public DbSet<Event> Events { get; set; }
-    
+
     }
 }
